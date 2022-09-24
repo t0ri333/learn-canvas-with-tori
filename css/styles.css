@@ -1,0 +1,23 @@
+canvas {
+  border: 1px solid black;
+}
+
+nav {
+  display: flex;
+  background-color: darkorchid;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style-type: none;
+
+  padding: 10px;
+}
+
+li a {
+  color: white;
+}
