@@ -1,11 +1,10 @@
-
 //Get Mouse Position
 function getMousePos(canvas, evt) {
-    let rect = canvas.getBoundingClientRect();
-    return {
-        x: evt.clientX - rect.left,
-        y: evt.clientY - rect.top
-    };
+  let rect = canvas.getBoundingClientRect();
+  return {
+    x: evt.clientX - rect.left,
+    y: evt.clientY - rect.top,
+  };
 }
 
 function draw() {
@@ -15,10 +14,13 @@ function draw() {
   const img = document.createElement("img");
   img.src = "images/memoji_sm.png";
 
-  canvas.addEventListener("click", function (evt) {
-    let mousePos = getMousePos(canvas, evt);
-    console.log(mousePos.x + ',' + mousePos.y);
-    ctx.drawImage(img, mousePos.x, mousePos.y);
-}, false);
+  canvas.addEventListener(
+    "click",
+    function (evt) {
+      let mousePos = getMousePos(canvas, evt);
+      console.log(mousePos.x + "," + mousePos.y);
+      ctx.drawImage(img, mousePos.x, mousePos.y);
+    },
+    false 
+  );
 }
-
